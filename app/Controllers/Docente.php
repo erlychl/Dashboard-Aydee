@@ -33,20 +33,4 @@ class Docente extends BaseController
         echo view('footer_');
     }
 
-    public function guardar(){
-       // $apellidos = $this->input->post['apellidos'];
-       // $nombres = $this->input->post['nombres'];
-       // $curso = $this->input->post['curso'];
-
-        $data = [
-
-            'apellidos'=>$apellidos,
-            'nombres'=>$nombres,
-            'curso'=>$curso
-        ]
-        $this->db->insert('docentes',$data);
-
-        header("location:".base_url()."/docentes");
-
-    }
 }
